@@ -13,6 +13,12 @@ openModalButtons.forEach(button => {
             const modal = document.querySelector("#emptyPlace");
             console.log(button.id);
             openModal(modal);
+
+            const buildButton = document.querySelector('#buildSawmill');
+            buildButton.addEventListener('click', () => {
+                
+                console.log(`buduje ${button.id} tutaj`)
+            });
         }  
         // const modal = document.querySelector(button.dataset.modalTarget);
         // openModal(modal);
