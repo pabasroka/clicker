@@ -1,3 +1,13 @@
+//Is built ...?
+let isBuiltSawmill = false;
+let isBuiltTownhall = false;
+
+
+
+
+
+
+
 //Create map with blocks
 for(let i=0; i<72; i++){
         const block = document.createElement('div');
@@ -7,6 +17,8 @@ for(let i=0; i<72; i++){
         block.id = `b${i}`;
         map.appendChild(block);
 }
+
+
 
 //Town hall
 const townHall = document.getElementById('b30');
@@ -19,11 +31,11 @@ townHall.dataset.modalTarget = "#townHall";
 
 
 //Sawmill
-const sawmill = document.getElementById('b15');
-sawmill.style.backgroundImage = "url('./assets/images/sawmill/sawmill-lvl1.png')";
-sawmill.style.backgroundSize = "cover";
-sawmill.className = "square building";
-sawmill.dataset.modalTarget = "#sawmill";
+// const sawmill = document.getElementById('b15');
+// sawmill.style.backgroundImage = "url('./assets/images/sawmill/sawmill-lvl1.png')";
+// sawmill.style.backgroundSize = "cover";
+// sawmill.className = "square building";
+// sawmill.dataset.modalTarget = "#sawmill";
 
 
 
@@ -34,18 +46,3 @@ sawmill.dataset.modalTarget = "#sawmill";
 //Market
 //UnderConstruction
 //Road
-
-
-const click = document
-
-
-//Empty Place
-//const emptyPlace = document.dataset.modalTarget = "#emptyPlace";
-// if (document.dataset.modalTarget == "#emptyPlace"){
-//     const emptyPlace = document.getElementById('#emptyPlace')
-// }
-// {
-//     if(document.dataset.modalTarget == "#emptyPlace"){
-//         console.log("mom0");
-//     }
-// }

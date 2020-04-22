@@ -14,23 +14,27 @@ openModalButtons.forEach(button => {
             console.log(button.id);
             openModal(modal);
 
-            const buildButton = document.querySelector('#buildSawmill');
-            buildButton.addEventListener('click', () => {
+            const buildSawmill = document.querySelector('#buildSawmill');
+            
+            buildSawmill.addEventListener('click', () => {
+                if(isBuiltSawmill == false){
+                    const place = button.id;
+                    const sawmill = document.getElementById(place);
+                    sawmill.style.backgroundImage = "url('./assets/images/sawmill/sawmill-lvl1.png')";
+                    sawmill.style.backgroundSize = "cover";
+                    sawmill.className = "square building";
+                    sawmill.dataset.modalTarget = "#sawmill";
+                    console.log(`buduje ${button.id} tutaj`)
+                    isBuiltSawmill = true;
+                    buildSawmill.disabled = true
+                }
                 
-                console.log(`buduje ${button.id} tutaj`)
             });
         }  
         // const modal = document.querySelector(button.dataset.modalTarget);
         // openModal(modal);
     })
 });
-
-overlay.addEventListener('click', () => {
-    const modals = document.querySelectorAll('.modal.active')
-    modals.forEach(modal => {
-        closeModal(modal)
-    })
-})
 
 closeModalButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -39,6 +43,14 @@ closeModalButtons.forEach(button => {
     })
 });
 
+
+
+overlay.addEventListener('click', () => {
+    const modals = document.querySelectorAll('.modal.active')
+    modals.forEach(modal => {
+        closeModal(modal)
+    })
+})
 function openModal(modal) {
     if (modal == null) return
     modal.classList.add('active');
