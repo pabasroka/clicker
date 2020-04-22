@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker</title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/popUp.css">
+</head>
+<body> 
+    <!--<img src="./assets/images/sawmill/sawmill-lvl1.png" alt="">-->
+
+    <nav>
+        <h1>Clicker</h1>
+        <ul>
+            <li>
+                <a href="index.html">BUDYNKI</a>
+                <a href="materials.html">SUROWCE</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="map" class="grid">
+
+
+
+
+        <!--==============      TOWN HALL        =======================-->
+        <!--<button data-modal-target="#townHall"> Ratusz </button>-->
+
+
+        <div class="modal" id="townHall">
+        
+            <div class="modal-header">
+                <div class="title"> Ratusz </div>
+                <button data-close-button class="close-button"> &times; </button>
+            </div>
+        
+            <div class="modal-body">
+                Ratusz jest głównym budynkiem miasta. Jego poziom definiuje maksymalny poziom pozostałych budowli. 
+                Ponadto w ratuszu możesz załatwić najważniejsze sprawy związane z gospodarką, dyplomacją oraz możesz zmienić nazwę swojego miasta!
+            </div>
+        
+        </div>
+
+
+
+
+
+
+
+        <!--==============      SAWMILL        =======================-->
+        <div class="modal" id="sawmill">
+        
+            <div class="modal-header">
+                <div class="title"> Tartak </div>
+                <button data-close-button class="close-button"> &times; </button>
+            </div>
+        
+            <div class="modal-body">
+                    Przez tartak przepływa cały zasób drewna. To od jego poziomu zależy jak dużo będziesz ścinał i produkował drewna. Drewno posłuży Ci do budowania oraz rozbudowywania miasta!
+            </div>
+        
+        </div>
+
+
+
+
+
+
+
+
+        <!--==============      EMPTY PLACE        =======================-->
+        <div class="modal" id="emptyPlace">
+        
+            <div class="modal-header">
+                <div class="title"> Wolne miejsce </div>
+                <button data-close-button class="close-button"> &times; </button>
+            </div>
+        
+            <div class="modal-body">
+                Wolne miejsce na budowę. Co chcesz wybudować?<br>
+                <img src="./assets/images/sawmill/sawmill-lvl1.png" alt="tartak">
+                <button id="buildSawmill">Wybuduj tartak</button>
+            </div>
+        
+        </div>
+
+
+
+
+
+
+
+
+    </main>
+
+    <div id="overlay"></div>
+
+    <script src="./js/index.js"></script>
+    <script src="./js/popUp.js"></script>
+</body>
+</html>
