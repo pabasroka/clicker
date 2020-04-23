@@ -12,22 +12,41 @@ body{
     grid-template-rows: repeat(6, 100px);
     gap: 5px;
 }
+.gridNav{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
 
 nav{
-    grid-column: span 13;
-    text-align: center;
     background: rgb(0, 90, 8);
     padding: 5px 0;
+    color: #fefefe;
+    font-weight: bolder;
+    font-size: 1.1em;
 }
 nav h1{
     color: #fefefe;
     font-size: 2em;
     margin: 0;
-    /*text-decoration: underline;*/
+    text-decoration: underline;
+    grid-column: 12/13;
+    grid-row: 1;
+}
+nav ul.u1{
+    grid-column: 1/4;
+}
+nav ul.u2{
+    grid-column: 4/7;
+}
+nav ul.u3{
+    grid-column: 7/10;
 }
 nav ul>li{
     list-style: none;
     padding: 3px 0; 
+    color: #fefefe;
+    font-weight: 100;
+    font-size: 0.8em;
 }
 nav ul>li a{
     text-decoration: none;
@@ -55,9 +74,19 @@ main{
     background: green;
     border-radius: 15px;
 }
-.square:hover{
-    opacity: 0.9;
+.emptyPlace:hover{
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+    -webkit-box-shadow: inset 0px 0px 25px 0px rgba(0,0,0,0.41);
+-moz-box-shadow: inset 0px 0px 25px 0px rgba(0,0,0,0.41);
+box-shadow: inset 0px 0px 25px 0px rgba(0,0,0,0.41);
 }
 .building{
     cursor: pointer;
+}
+.building:hover{
+    transition: all .175s ease-in-out;
+    -webkit-box-shadow: inset 0px 0px 25px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: inset 0px 0px 25px 0px rgba(0,0,0,0.3);
+    box-shadow: inset 0px 0px 25px 0px rgba(0,0,0,0.3);
 }

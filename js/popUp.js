@@ -14,40 +14,18 @@ openModalButtons.forEach(button => {
             const modal = document.querySelector("#emptyPlace");
             openModal(modal);
             place = button.id;
-            build("sawmill");
+
+            // BUILDINGS
+            const buttonTownhall = document.querySelector('#buttonTownhall');
+            buttonTownhall.addEventListener('click', buildTownhall);
+
+            const buttonSawmill = document.querySelector('#buttonSawmill');
+            buttonSawmill.addEventListener('click', buildSawmill);
+
+
         }  
     })
 });
-
-
-
-function build(building){
-
-    if (building === "sawmill"){
-        console.log("eee");
-        const buildSawmill = document.querySelector('#buildSawmill');
-
-        buildSawmill.addEventListener('click', () => {
-            if (isBuiltSawmill == false) {
-                const sawmill = document.getElementById(place);
-
-                sawmill.style.backgroundImage = "url('./assets/images/sawmill/sawmill-lvl1.png')";
-                sawmill.style.backgroundSize = "cover";
-                sawmill.className = "square building";
-                sawmill.dataset.modalTarget = "#sawmill";
-
-                isBuiltSawmill = true;
-                buildSawmill.disabled = true
-            }
-
-        });
-    }
-
-}
-
-
-
-
 
 
 

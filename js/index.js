@@ -1,6 +1,13 @@
 //Is built ...?
 let isBuiltSawmill = false;
 let isBuiltTownhall = false;
+let isBuiltQuarry = false;
+let isBuiltAcademy = false;
+let isBuiltBarrack = false;
+let isBuiltArmory = false;
+let isBuiltMarket = false;
+let isBuiltRoad = false;
+let isBuiltUnderConstruction = false;
 
 
 
@@ -20,17 +27,11 @@ for(let i=0; i<72; i++){
 
 
 
-//Town hall
-const townHall = document.getElementById('b30');
-townHall.style.backgroundImage = "url('./assets/images/townHall/townHall-lvl1.png')";
-townHall.style.backgroundSize = "cover";
-townHall.className = "square building";
-townHall.dataset.modalTarget = "#townHall";
 
 
 
 
-//Sawmill
+
 // const sawmill = document.getElementById('b15');
 // sawmill.style.backgroundImage = "url('./assets/images/sawmill/sawmill-lvl1.png')";
 // sawmill.style.backgroundSize = "cover";

@@ -10,14 +10,25 @@
 <body> 
     <!--<img src="./assets/images/sawmill/sawmill-lvl1.png" alt="">-->
 
-    <nav>
+    <nav class="gridNav">
         <h1>Clicker</h1>
-        <ul>
-            <li>
-                <a href="index.html">BUDYNKI</a>
-                <a href="materials.html">SUROWCE</a>
-            </li>
+        <ul class="u1">
+            Złoto: <li class="gold"> </li>
+            Drewno: <li class="wood"> </li>
+            Kamień: <li class="stone"> </li>
         </ul>
+        <ul class="u2">
+            Populacja: <li class="population"></li>
+            Zadowolenie: <li class="satisfaction"></li>
+            Punkty nauki: <li class="science"></li>
+        </ul>
+        <ul class="u3">
+            Punkty doświadczenia: <li class="experience"></li>
+            Poziom: <li class="level"></li>
+        </ul>
+
+        
+
     </nav>
 
     <main id="map" class="grid">
@@ -81,10 +92,10 @@
             <div class="modal-body">
                 Wolne miejsce na budowę. Co chcesz wybudować?<br>
                 <img src="./assets/images/sawmill/sawmill-lvl1.png" alt="tartak">
-                <button id="buildSawmill">Wybuduj tartak</button>
+                <button id="buttonSawmill">Wybuduj tartak</button>
 
                 <img src="./assets/images/townHall/townHall-lvl1.png" alt="ratusz">
-                <button id="buildTownhall">Wybuduj ratusz</button>
+                <button id="buttonTownhall">Wybuduj ratusz</button>
             </div>
         
         </div>
@@ -100,7 +111,9 @@
 
     <div id="overlay"></div>
 
+    <script src="./js/buildings.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/popUp.js"></script>
+    <script src="./js/resources.js"></script>
 </body>
 </html>
