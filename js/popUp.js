@@ -1,6 +1,7 @@
 const openModalButtons = document.querySelectorAll('[data-modal-target]');
 const closeModalButtons = document.querySelectorAll('[data-close-button]');
 const overlay = document.getElementById('overlay');
+let place;
 
 openModalButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -11,39 +12,52 @@ openModalButtons.forEach(button => {
             console.log(button.dataset.modalTarget);
         }else{
             const modal = document.querySelector("#emptyPlace");
-            console.log(button.id);
             openModal(modal);
-
-            const buildSawmill = document.querySelector('#buildSawmill');
-            
-            buildSawmill.addEventListener('click', () => {
-                if(isBuiltSawmill == false){
-                    const place = button.id;
-                    const sawmill = document.getElementById(place);
-                    sawmill.style.backgroundImage = "url('./assets/images/sawmill/sawmill-lvl1.png')";
-                    sawmill.style.backgroundSize = "cover";
-                    sawmill.className = "square building";
-                    sawmill.dataset.modalTarget = "#sawmill";
-                    console.log(`buduje ${button.id} tutaj`)
-                    isBuiltSawmill = true;
-                    buildSawmill.disabled = true
-                }
-                
-            });
+            place = button.id;
+            build("sawmill");
         }  
-        // const modal = document.querySelector(button.dataset.modalTarget);
-        // openModal(modal);
     })
 });
 
+
+
+function build(building){
+
+    if (building === "sawmill"){
+        console.log("eee");
+        const buildSawmill = document.querySelector('#buildSawmill');
+
+        buildSawmill.addEventListener('click', () => {
+            if (isBuiltSawmill == false) {
+                const sawmill = document.getElementById(place);
+
+                sawmill.style.backgroundImage = "url('./assets/images/sawmill/sawmill-lvl1.png')";
+                sawmill.style.backgroundSize = "cover";
+                sawmill.className = "square building";
+                sawmill.dataset.modalTarget = "#sawmill";
+
+                isBuiltSawmill = true;
+                buildSawmill.disabled = true
+            }
+
+        });
+    }
+
+}
+
+
+
+
+
+
+
+/*==============    POPUP CLOSE    ==============*/
 closeModalButtons.forEach(button => {
     button.addEventListener('click', () => {
         const modal = button.closest('.modal')
         closeModal(modal)
     })
 });
-
-
 
 overlay.addEventListener('click', () => {
     const modals = document.querySelectorAll('.modal.active')
