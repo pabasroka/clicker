@@ -8,6 +8,7 @@ function buildSawmill(){
         sawmill.dataset.modalTarget = "#sawmill";
         isBuiltSawmill = true;
         buttonSawmill.disabled = true;
+        closeModal(modal)
     }
 }
 
@@ -22,5 +23,6 @@ function buildTownhall() {
         townHall.dataset.modalTarget = "#townHall";
         isBuiltTownhall = true;
         buttonTownhall.disabled = true;
+        closeModal(modal)
     }
 }

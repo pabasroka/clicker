@@ -1,17 +1,18 @@
 const openModalButtons = document.querySelectorAll('[data-modal-target]');
 const closeModalButtons = document.querySelectorAll('[data-close-button]');
 const overlay = document.getElementById('overlay');
+let modal;
 let place;
 
 openModalButtons.forEach(button => {
     button.addEventListener('click', () => {
         if (button.dataset.modalTarget !== "#emptyPlace"){
-            const modal = document.querySelector(button.dataset.modalTarget);
+            modal = document.querySelector(button.dataset.modalTarget);
             openModal(modal);
             console.log(button.id);
             console.log(button.dataset.modalTarget);
         }else{
-            const modal = document.querySelector("#emptyPlace");
+            modal = document.querySelector("#emptyPlace");
             openModal(modal);
             place = button.id;
 
@@ -32,13 +33,13 @@ openModalButtons.forEach(button => {
 /*==============    POPUP CLOSE    ==============*/
 closeModalButtons.forEach(button => {
     button.addEventListener('click', () => {
-        const modal = button.closest('.modal')
+        modal = button.closest('.modal')
         closeModal(modal)
     })
 });
 
 overlay.addEventListener('click', () => {
-    const modals = document.querySelectorAll('.modal.active')
+    modals = document.querySelectorAll('.modal.active')
     modals.forEach(modal => {
         closeModal(modal)
     })

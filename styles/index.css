@@ -16,6 +16,53 @@ body{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
+.gridModal{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 50%);
+}
+
+
+
+.modalBuilding{
+    grid-column: span 2;
+    text-align: center;
+}
+.modalBuilding h3{
+    font-weight: bolder;
+    font-size: 1.5em;
+    color: #18ab29;
+}
+.modalBuilding img{
+    width: 30%;
+}
+.modalBuilding button{
+    background-color:#44c767;
+	border-radius:14px;
+	border:4px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:14px 34px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627;
+}
+.modalBuilding button:hover{
+    transition: all .5s ease-in-out;
+    background-color:#5cbf2a;
+}
+.modalBuilding button:active{
+    position:relative;
+	top:1px;
+}
+button:disabled, button:disabled:hover{
+  border: 3px solid #ff0000;
+  background-color: #fd4e4e;
+  color: #ffffff;
+}
+
 
 nav{
     background: rgb(0, 90, 8);
@@ -59,6 +106,12 @@ nav ul>li a{
 nav ul>li a:hover{
     color: gold;
     transition: all .5s ease-in-out;
+}
+table,tr,td, img{
+    text-align: center;
+}
+table{
+    width: 100%;
 }
 
 main{
