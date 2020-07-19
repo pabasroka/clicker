@@ -11,20 +11,20 @@
     <!--<img src="./assets/images/sawmill/sawmill-lvl1.png" alt="">-->
 
     <nav class="gridNav">
-        <h1>Clicker</h1>
+        <h1 id="mainTownName">Clicker</h1>
         <ul class="u1">
-            Złoto: <li class="gold"> </li>
-            Drewno: <li class="wood"> </li>
-            Kamień: <li class="stone"> </li>
+            <li class="gold"> </li>
+            <li class="wood"> </li>
+            <li class="stone"> </li>
         </ul>
         <ul class="u2">
-            Populacja: <li class="population"></li>
-            Zadowolenie: <li class="satisfaction"></li>
-            Punkty nauki: <li class="science"></li>
+            <li class="population"></li>
+            <li class="satisfaction"></li>
+            <li class="science"></li>
         </ul>
         <ul class="u3">
-            Punkty doświadczenia: <li class="experience"></li>
-            Poziom: <li class="level"></li>
+            <li class="experience"></li>
+            <li class="level"></li>
         </ul>
 
         
@@ -32,6 +32,10 @@
     </nav>
 
     <main id="map" class="grid">
+
+
+
+
 
 
 
@@ -50,15 +54,16 @@
             <div class="modal-body">
                 Ratusz jest głównym budynkiem miasta. Jego poziom definiuje maksymalny poziom pozostałych budowli. 
                 Ponadto w ratuszu możesz załatwić najważniejsze sprawy związane z gospodarką, dyplomacją oraz możesz zmienić nazwę swojego miasta!
+            
+                <br><br>
+
+                Zmień nazwę miasta!<br>
+                <input type="text" id="townName">
+                <button id="changeTownName" class="buttonAccept">Zmień nazwę!</button>
+
             </div>
         
         </div>
-
-
-
-
-
-
 
         <!--==============      SAWMILL        =======================-->
         <div class="modal" id="sawmill">
@@ -73,6 +78,108 @@
             </div>
         
         </div>
+
+        <!--==============      QUARRY        =======================-->
+        <div class="modal" id="quarry">
+        
+            <div class="modal-header">
+                <div class="title"> Kamieniołom </div>
+                <button data-close-button class="close-button"> &times; </button>
+            </div>
+        
+            <div class="modal-body">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, necessitatibus doloribus? Molestias minus dicta maiores soluta in nostrum, et cum iusto atque odit repellat quasi earum quibusdam? Unde, voluptas aperiam consequatur fugit, laudantium incidunt deserunt iusto expedita harum voluptatem impedit distinctio nobis. Distinctio eos neque molestiae optio! Voluptatum, voluptas expedita.
+            </div>
+        
+        </div>
+
+        <!--==============      ACADEMY        =======================-->
+        <div class="modal" id="academy">
+        
+            <div class="modal-header">
+                <div class="title"> Akademia </div>
+                <button data-close-button class="close-button"> &times; </button>
+            </div>
+        
+            <div class="modal-body">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, necessitatibus doloribus? Molestias minus
+                dicta maiores soluta in nostrum, et cum iusto atque odit repellat quasi earum quibusdam? Unde, voluptas aperiam
+                consequatur fugit, laudantium incidunt deserunt iusto expedita harum voluptatem impedit distinctio nobis.
+                Distinctio eos neque molestiae optio! Voluptatum, voluptas expedita.
+            </div>
+        
+        </div>
+
+        <!--==============      BARRACK        =======================-->
+        <div class="modal" id="barrack">
+        
+            <div class="modal-header">
+                <div class="title"> Koszary </div>
+                <button data-close-button class="close-button"> &times; </button>
+            </div>
+        
+            <div class="modal-body">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, necessitatibus doloribus? Molestias minus
+                dicta maiores soluta in nostrum, et cum iusto atque odit repellat quasi earum quibusdam? Unde, voluptas aperiam
+                consequatur fugit, laudantium incidunt deserunt iusto expedita harum voluptatem impedit distinctio nobis.
+                Distinctio eos neque molestiae optio! Voluptatum, voluptas expedita.
+            </div>
+        
+        </div>
+
+        <!--==============      ARMORY        =======================-->
+        <div class="modal" id="armory">
+        
+            <div class="modal-header">
+                <div class="title"> Zbrojownia </div>
+                <button data-close-button class="close-button"> &times; </button>
+            </div>
+        
+            <div class="modal-body">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, necessitatibus doloribus? Molestias minus
+                dicta maiores soluta in nostrum, et cum iusto atque odit repellat quasi earum quibusdam? Unde, voluptas aperiam
+                consequatur fugit, laudantium incidunt deserunt iusto expedita harum voluptatem impedit distinctio nobis.
+                Distinctio eos neque molestiae optio! Voluptatum, voluptas expedita.
+            </div>
+        
+        </div>
+
+        <!--==============      MARKET        =======================-->
+        <div class="modal" id="market">
+        
+            <div class="modal-header">
+                <div class="title"> Bazar </div>
+                <button data-close-button class="close-button"> &times; </button>
+            </div>
+        
+            <div class="modal-body">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, necessitatibus doloribus? Molestias minus
+                dicta maiores soluta in nostrum, et cum iusto atque odit repellat quasi earum quibusdam? Unde, voluptas aperiam
+                consequatur fugit, laudantium incidunt deserunt iusto expedita harum voluptatem impedit distinctio nobis.
+                Distinctio eos neque molestiae optio! Voluptatum, voluptas expedita.
+            </div>
+        
+        </div>
+
+        <!--==============      ROAD        =======================-->
+        <div class="modal" id="road">
+        
+            <div class="modal-header">
+                <div class="title"> Droga </div>
+                <button data-close-button class="close-button"> &times; </button>
+            </div>
+        
+            <div class="modal-body">
+                Droga poprawia transport oraz ułatwia przemieszczanie się obywateli. Wpływa pozytywnie na zadowolenie mieszkańców.
+            </div>
+        
+        </div>
+
+
+
+
+
+
 
 
 
@@ -93,63 +200,85 @@
         
             <div class="modal-body gridModal">
 
+
                 <div class="modalBuilding">
                     <h3>RATUSZ</h3>
                     <img src="./assets/images/townHall/townHall-lvl1.png" alt="ratusz"><br>
-                    <button id="buttonTownhall">Wybuduj ratusz</button>
+                    <button class="buttonBuild" id="buttonTownhall">Wybuduj ratusz</button>
+                    <button data-modal-target-info="#townhallInfo" class="buttonInfo" id="infoTownhall">&#63;<!--Informacje o ratuszu--></button>
+                    <p>
+                        DARMOWA BUDOWA
+                    </p>
                 </div>
 
                 <div class="modalBuilding">
                     <h3>TARTAK</h3>
                     <img src="./assets/images/sawmill/sawmill-lvl1.png" alt="tartak"><br>
-                    <button id="buttonSawmill">Wybuduj tartak</button>
+                    <button class="buttonBuild" id="buttonSawmill">Wybuduj tartak</button>
+                    <button data-modal-target-info="#sawmillInfo" class="buttonInfo" id="infoSawmill">&#63;<!--Informacje o tartaku--></button>
+                    <p>
+                        50 <img src="./assets//images/resources/gold.png" alt="gold">
+                    </p>
                 </div>
 
-                
-                <!--<table>
-                    <tr>
-                        <td>RATUSZ</td>
-                        <td>TARTAK</td>
-                        <td>TARTAK</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="./assets/images/townHall/townHall-lvl1.png" alt="ratusz"><br>
-                            <button id="buttonTownhall">Wybuduj ratusz</button>
-                        </td>
-                        <td>
-                            <img src="./assets/images/sawmill/sawmill-lvl1.png" alt="tartak"><br>
-                            <button id="buttonSawmill">Wybuduj tartak</button>
-                        </td>
-                        <td>
-                            <img src="./assets/images/sawmill/sawmill-lvl1.png" alt="tartak"><br>
-                            <button id="buttonSawmill">Wybuduj tartak</button>
-                        </td>
-                        <td>
-                            <img src="./assets/images/sawmill/sawmill-lvl1.png" alt="tartak"><br>
-                            <button id="buttonSawmill">Wybuduj tartak</button>
-                        </td>
-                        <td>
-                            <img src="./assets/images/sawmill/sawmill-lvl1.png" alt="tartak"><br>
-                            <button id="buttonSawmill">Wybuduj tartak</button>
-                        </td>
-                        <td>
-                            <img src="./assets/images/sawmill/sawmill-lvl1.png" alt="tartak"><br>
-                            <button id="buttonSawmill">Wybuduj tartak</button>
-                        </td>
-                        <td>
-                            <img src="./assets/images/sawmill/sawmill-lvl1.png" alt="tartak"><br>
-                            <button id="buttonSawmill">Wybuduj tartak</button>
-                        </td>
-                        <td>
-                            <img src="./assets/images/sawmill/sawmill-lvl1.png" alt="tartak"><br>
-                            <button id="buttonSawmill">Wybuduj tartak</button>
-                        </td>
-                
-                    </tr>
-                </table>-->
+                <div class="modalBuilding">
+                    <h3>KAMIENIOŁOM</h3>
+                    <img src="./assets/images/quarry/quarry-lvl1.png" alt="kamieniołom"><br>
+                    <button class="buttonBuild" id="buttonQuarry">Wybuduj kamieniołom</button>
+                    <button data-modal-target-info="#quarryInfo" class="buttonInfo" id="infoQuarry">&#63;<!--Informacje o kamieniołomie--></button>
+                    <p>
+                        50 <img src="./assets//images/resources/gold.png" alt="gold"><br>
+                        50 <img src="./assets/images/resources/wood.png" alt="wood">
+                    </p>
+                </div>
 
-                
+                <div class="modalBuilding">
+                    <h3>AKADEMIA</h3>
+                    <img src="./assets/images/academy/academy-lvl1.png" alt="akademia"><br>
+                    <button class="buttonBuild" id="buttonAcademy">Wybuduj akademię</button>
+                    <button data-modal-target-info="#academyInfo" class="buttonInfo" id="infoAcademy">&#63;<!--Informacje o akademii--></button>
+                    <p>
+                        350 <img src="./assets//images/resources/gold.png" alt="gold"><br>
+                        200 <img src="./assets/images/resources/wood.png" alt="wood"><br>
+                        200 <img src="./assets/images/resources/wood.png" alt="stone">
+                    </p>
+                </div>
+
+                <div class="modalBuilding">
+                    <h3>KOSZARY</h3>
+                    <img src="./assets/images/barrack/barrack-lvl1.png" alt="koszary"><br>
+                    <button class="buttonBuild" id="buttonBarrack">Wybuduj koszary</button>
+                    <button data-modal-target-info="#barrackInfo" class="buttonInfo" id="infoBarrack">&#63;<!--Informacje o koszarach--></button>
+                    <p>
+                        200 <img src="./assets//images/resources/gold.png" alt="gold"><br>
+                        75 <img src="./assets/images/resources/wood.png" alt="wood">
+                    </p>
+                </div>
+
+                <div class="modalBuilding">
+                    <h3>ZBROJOWNIA</h3>
+                    <img src="./assets/images/armory/armory-lvl1.png" alt="zbrojownia"><br>
+                    <button class="buttonBuild" id="buttonArmory">Wybuduj zbrojownie</button>
+                    <button data-modal-target-info="#armoryInfo" class="buttonInfo" id="infoArmory">&#63;<!-- Informacje o zbrojowni --></button>
+                    <p>
+                        200 <img src="./assets//images/resources/gold.png" alt="gold"><br>
+                        75 <img src="./assets/images/resources/wood.png" alt="wood">
+                    </p>
+                </div>
+
+                <div class="modalBuilding">
+                    <h3>BAZAR</h3>
+                    <img src="./assets/images/market/market-lvl1.png" alt="bazar"><br>
+                    <button class="buttonBuild" id="buttonMarket">Wybuduj bazar</button>
+                    <button data-modal-target-info="#marketInfo" class="buttonInfo" id="infoMarket">&#63;
+                        <!-- Informacje o zbrojowni --></button>
+                    <p>
+                        500 <img src="./assets//images/resources/gold.png" alt="gold"><br>
+                        150 <img src="./assets/images/resources/wood.png" alt="wood"><br>
+                        75 <img src="./assets/images/resources/wood.png" alt="stone">
+                    </p>
+                </div>
+  
 
                 
             </div>
@@ -163,13 +292,79 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--======================      MODALINFO    ======================-->
+
+        <div class="modalInfo" id="townhallInfo">
+        
+            <div class="modal-header-info">
+                <div class="title-info"> Ratusz - informacje </div>
+                <button data-close-button-info class="close-button-info"> &times; </button>
+            </div>
+        
+            <div class="modal-body-info">
+                Ratusz jest głównym budynkiem miasta. Jego poziom definiuje maksymalny poziom pozostałych budowli.
+                Ponadto w ratuszu możesz załatwić najważniejsze sprawy związane z gospodarką, dyplomacją oraz możesz zmienić nazwę
+                swojego miasta!
+            </div>
+        
+        </div>
+
+        <div class="modalInfo" id="sawmillInfo">
+        
+            <div class="modal-header-info">
+                <div class="title-info"> Tartak - informacje </div>
+                <button data-close-button-info class="close-button-info"> &times; </button>
+            </div>
+        
+            <div class="modal-body-info">
+                Informacje o Tartaku
+            </div>
+        
+        </div>
+
+        <div class="modalInfo" id="quarryInfo">
+        
+            <div class="modal-header-info">
+                <div class="title-info"> Kamieniołom - informacje </div>
+                <button data-close-button-info class="close-button-info"> &times; </button>
+            </div>
+        
+            <div class="modal-body-info">
+                Informacje o kamieniołomie
+            </div>
+        
+        </div>
+
+
+
+
+
+
+
+
+
     </main>
 
     <div id="overlay"></div>
+    <div id="overlayInfo"></div>
 
     <script src="./js/buildings.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/popUp.js"></script>
     <script src="./js/resources.js"></script>
+    <script src="./js/buildingInfo.js"></script>
+    <script src="./js/townHall.js"></script>
 </body>
 </html>

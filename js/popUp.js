@@ -4,6 +4,7 @@ const overlay = document.getElementById('overlay');
 let modal;
 let place;
 
+
 openModalButtons.forEach(button => {
     button.addEventListener('click', () => {
         if (button.dataset.modalTarget !== "#emptyPlace"){
@@ -23,6 +24,25 @@ openModalButtons.forEach(button => {
             const buttonSawmill = document.querySelector('#buttonSawmill');
             buttonSawmill.addEventListener('click', buildSawmill);
 
+            const buttonQuarry = document.querySelector('#buttonQuarry');
+            buttonQuarry.addEventListener('click', buildQuarry);
+
+            //not tested
+            const buttonAcademy = document.querySelector('#buttonAcademy');
+            buttonAcademy.addEventListener('click', buildAcademy);
+
+            const buttonBarrack = document.querySelector('#buttonBarrack');
+            buttonBarrack.addEventListener('click', buildBarrack);
+
+            const buttonArmory = document.querySelector('#buttonArmory');
+            buttonArmory.addEventListener('click', buildArmory);
+
+            const buttonMarket = document.querySelector('#buttonMarket');
+            buttonMarket.addEventListener('click', buildMarket);
+
+            const buttonRoad = document.querySelector('#buttonRoad');
+            buttonRoad.addEventListener('click', buildRoad);
+
 
         }  
     })
@@ -37,7 +57,6 @@ closeModalButtons.forEach(button => {
         closeModal(modal)
     })
 });
-
 overlay.addEventListener('click', () => {
     modals = document.querySelectorAll('.modal.active')
     modals.forEach(modal => {

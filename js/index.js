@@ -7,7 +7,7 @@ let isBuiltBarrack = false;
 let isBuiltArmory = false;
 let isBuiltMarket = false;
 let isBuiltRoad = false;
-let isBuiltUnderConstruction = false;
+let underConstruction = false;
 
 
 
