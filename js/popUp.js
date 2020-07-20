@@ -20,14 +20,23 @@ openModalButtons.forEach(button => {
 
             // BUILDINGS
 
-            document.querySelector('#buttonTownhall').addEventListener('click', function(){
-                build(isBuiltTownhall, townHall, buttonTownhall, 'townHall')
-            });
 
+
+            /*document.querySelector('#buttonTownhall').addEventListener('click', function(){
+                build(isBuiltTownhall, townHall, buttonTownhall, 'townHall')
+            });*/
+
+            document.querySelector('#buttonTownhall').addEventListener('click', function(){
+                townHallClass.build(isBuiltTownhall, townHall, buttonTownhall, 'townHall', 'townHall/townHall-lvl1.png', 0, 0, 0)
+            })
+
+            document.querySelector('#buttonSawmill').addEventListener('click', function () {
+                townHallClass.build(isBuiltSawmill, sawmill, buttonSawmill, 'sawmill', 'sawmill/sawmill-lvl1.png', 50, 0, 0)
+            })
 
 
             //document.querySelector('#buttonTownhall').addEventListener('click', buildTownhall);
-            document.querySelector('#buttonSawmill').addEventListener('click', buildSawmill);
+            //document.querySelector('#buttonSawmill').addEventListener('click', buildSawmill);
             document.querySelector('#buttonQuarry').addEventListener('click', buildQuarry);
             document.querySelector('#buttonAcademy').addEventListener('click', buildAcademy);
             document.querySelector('#buttonBarrack').addEventListener('click', buildBarrack);

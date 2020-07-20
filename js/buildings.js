@@ -1,6 +1,53 @@
+class Building {
+    constructor(isBuiltSth, typeOfBuilding, buttonOfBuilding, nameBuilding){
+        this.isBuiltSth = isBuiltSth
+        this.typeOfBuilding = typeOfBuilding
+        this.buttonOfBuilding = buttonOfBuilding
+        this.nameBuilding = nameBuilding
+    }
+
+    build(isBuiltSth, typeOfBuilding, buttonOfBuilding, nameBuilding, path, gold, wood, stone){
+        if (isBuiltSth === false) {
+
+            if(this.subtractRes(gold, wood, stone)){
+                const typeOfBuilding = document.getElementById(place);
+                typeOfBuilding.style.backgroundImage = `url('./assets/images/${path}')`;
+                typeOfBuilding.style.backgroundSize = "cover";
+                typeOfBuilding.className = "square building";
+
+                console.log(typeOfBuilding.id)
+                typeOfBuilding.dataset.modalTarget = `#${nameBuilding}`;
+
+                isBuiltSth = true;
+                buttonOfBuilding.disabled = true;
+                resources();
+                closeModal(modal);
+            }       
+        } else {
+            alert('Coś poszło nie tak')
+        }
+    }
+
+    subtractRes(goldP, woodP, stoneP){
+        if(gold >= goldP && wood >= woodP && stone >= stoneP){
+            gold -= goldP;
+            wood -= woodP;
+            stone -= stoneP;
+            return true
+        } else {
+            return false
+        }
+    }
+}
+
+const townHallClass = new Building(isBuiltTownhall, townHall, buttonTownhall, 'townHall')
+const sawmillClass = new Building(isBuiltSawmill, sawmill, buttonSawmill, 'sawmill')
 
 
-function build(isBuiltSth, typeOfBuilding, buttonOfBuilding, nameBuilding) {
+
+
+
+/*function build(isBuiltSth, typeOfBuilding, buttonOfBuilding, nameBuilding) {
     if(isBuiltSth === false) {
         console.log('eee')
         const typeOfBuilding = document.getElementById(place);
@@ -19,7 +66,7 @@ function build(isBuiltSth, typeOfBuilding, buttonOfBuilding, nameBuilding) {
         alert('Dupa zbita - za mało surowców')
     }
 }
-
+*/
 
 //Town hall
 /*function buildTownhall() {
@@ -43,7 +90,7 @@ function build(isBuiltSth, typeOfBuilding, buttonOfBuilding, nameBuilding) {
 
 
 
-
+/*
 //Sawmill
 function buildSawmill(){
     if (isBuiltSawmill == false) {
@@ -85,3 +132,4 @@ function buildQuarry() {
     }
 }
 
+*/
