@@ -19,6 +19,7 @@ openModalButtons.forEach(button => {
             place = button.id;
 
             // BUILDINGS
+            
 
 
 

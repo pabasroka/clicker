@@ -175,6 +175,20 @@ nav .u3>li:nth-child(2)::before{
 }
 
 
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+.progress-bar{
+    width: 500px;
+    height: 3em;
+    background: #111;
+    border-radius: 1.5em;
+    color: white;
+    z-index: 50;
+}
+.progress-bar::before{
+    content: attr(data-label);
+}
 
 
 

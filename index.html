@@ -6,6 +6,7 @@
     <title>Clicker</title>
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/popUp.css">
+    <link rel="stylesheet" href="./styles/alert.css">
 </head>
 <body> 
     <!--<img src="./assets/images/sawmill/sawmill-lvl1.png" alt="">-->
@@ -23,17 +24,28 @@
             <li class="science"></li>
         </ul>
         <ul class="u3">
-            <li class="experience"></li>
+            <li class="experience">
+                <div class="progress"></div>
+            </li>
             <li class="level"></li>
         </ul>
 
-        
-
     </nav>
 
+
+    <!-- <button id="alert">Show Alert</button> -->
+    <div class="alert hide">
+        <span class="fas fa-award"></span>
+        <span class="msg">Zbudowałeś nowy budynek!</span>
+        <div class="close-btn">
+            <span class="fas fa-times"></span>
+        </div>
+    </div>
+
+
+
+
     <main id="map" class="grid">
-
-
 
 
 
@@ -204,7 +216,7 @@
                 <div class="modalBuilding">
                     <h3>RATUSZ</h3>
                     <img src="./assets/images/townHall/townHall-lvl1.png" alt="ratusz"><br>
-                    <button class="buttonBuild" id="buttonTownhall">Wybuduj ratusz</button>
+                    <button class="buttonBuild" id="buttonTownhall" class="buttonAlert">Wybuduj ratusz</button>
                     <button data-modal-target-info="#townhallInfo" class="buttonInfo" id="infoTownhall">&#63;<!--Informacje o ratuszu--></button>
                     <p>
                         DARMOWA BUDOWA
@@ -360,11 +372,19 @@
     <div id="overlay"></div>
     <div id="overlayInfo"></div>
 
+    <script src="./js/alert.js"></script>
+
     <script src="./js/index.js"></script>
     <script src="./js/buildings.js"></script>
     <script src="./js/popUp.js"></script>
     <script src="./js/resources.js"></script>
     <script src="./js/buildingInfo.js"></script>
     <script src="./js/townHall.js"></script>
+    
+    <script src="./js/alert.js"></script>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    
 </body>
 </html>

@@ -10,6 +10,27 @@ class Building {
         if (isBuiltSth === false) {
 
             if(this.subtractRes(gold, wood, stone)){
+
+                const buttonBuild = document.querySelectorAll('.buttonBuild')
+                const alert = document.querySelector('.alert')
+
+                buttonBuild.forEach(function (btnBuild) {
+                    btnBuild.addEventListener('click', () => {
+
+                        alert.classList.add('show')
+                        alert.classList.remove('hide')
+                        alert.classList.add('showAlert')
+                        setTimeout(function () {
+                            alert.classList.remove('show')
+                            alert.classList.add('hide')
+                        }, 2500)
+                    })
+                })
+
+                document.querySelector('.close-btn').addEventListener('click', () => {
+                    alert.classList.remove('show')
+                    alert.classList.add('hide')
+                })
                 const typeOfBuilding = document.getElementById(place);
                 typeOfBuilding.style.backgroundImage = `url('./assets/images/${path}')`;
                 typeOfBuilding.style.backgroundSize = "cover";
@@ -20,8 +41,10 @@ class Building {
 
                 isBuiltSth = true;
                 buttonOfBuilding.disabled = true;
+                
                 resources();
                 closeModal(modal);
+
             }       
         } else {
             alert('Coś poszło nie tak')
