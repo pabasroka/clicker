@@ -3,6 +3,7 @@ const closeModalButtons = document.querySelectorAll('[data-close-button]');
 const overlay = document.getElementById('overlay');
 let modal;
 let place;
+let isbuiltSth;
 
 
 openModalButtons.forEach(button => {
@@ -18,7 +19,23 @@ openModalButtons.forEach(button => {
             place = button.id;
 
             // BUILDINGS
-            const buttonTownhall = document.querySelector('#buttonTownhall');
+
+            document.querySelector('#buttonTownhall').addEventListener('click', function(){
+                build(isBuiltTownhall, townHall, buttonTownhall, 'townHall')
+            });
+
+
+
+            //document.querySelector('#buttonTownhall').addEventListener('click', buildTownhall);
+            document.querySelector('#buttonSawmill').addEventListener('click', buildSawmill);
+            document.querySelector('#buttonQuarry').addEventListener('click', buildQuarry);
+            document.querySelector('#buttonAcademy').addEventListener('click', buildAcademy);
+            document.querySelector('#buttonBarrack').addEventListener('click', buildBarrack);
+            document.querySelector('#buttonArmory').addEventListener('click', buildArmory);
+            document.querySelector('#buttonMarket').addEventListener('click', buildMarket);
+            document.querySelector('#buttonRoad').addEventListener('click', buildRoad);
+
+            /*const buttonTownhall = document.querySelector('#buttonTownhall');
             buttonTownhall.addEventListener('click', buildTownhall);
 
             const buttonSawmill = document.querySelector('#buttonSawmill');
@@ -41,7 +58,7 @@ openModalButtons.forEach(button => {
             buttonMarket.addEventListener('click', buildMarket);
 
             const buttonRoad = document.querySelector('#buttonRoad');
-            buttonRoad.addEventListener('click', buildRoad);
+            buttonRoad.addEventListener('click', buildRoad);*/
 
 
         }  

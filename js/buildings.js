@@ -1,5 +1,28 @@
+
+
+function build(isBuiltSth, typeOfBuilding, buttonOfBuilding, nameBuilding) {
+    if(isBuiltSth === false) {
+        console.log('eee')
+        const typeOfBuilding = document.getElementById(place);
+        typeOfBuilding.style.backgroundImage = "url('./assets/images/townHall/townHall-lvl1.png')";
+        typeOfBuilding.style.backgroundSize = "cover";
+        typeOfBuilding.className = "square building";
+
+        console.log(typeOfBuilding.id)
+        typeOfBuilding.dataset.modalTarget = `#${nameBuilding}`;
+
+        isBuiltSth = true;
+        buttonOfBuilding.disabled = true;
+        resources();
+        closeModal(modal);
+    } else {
+        alert('Dupa zbita - za mało surowców')
+    }
+}
+
+
 //Town hall
-function buildTownhall() {
+/*function buildTownhall() {
     if (isBuiltTownhall == false) {
         //if(gold >= 50){
             //gold -= 50;
@@ -16,7 +39,7 @@ function buildTownhall() {
             //alert("Za mało surowców");
         //}
     }
-}
+}*/
 
 
 
